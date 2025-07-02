@@ -4,7 +4,15 @@ function toggleMobileMenu() {
 
 function openModal(e) {
   e.preventDefault();
-  document.getElementById("newsletterModal").classList.remove("hidden");
+  const modal = document.getElementById("newsletterModal");
+  modal.classList.remove("hidden");
+
+  // Close if clicking outside the white box
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
 }
 
 function closeModal() {
