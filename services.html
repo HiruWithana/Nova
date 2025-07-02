@@ -14,18 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- gsap -->
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 
 
     <!-- custom styles -->
@@ -431,63 +423,11 @@
 
 
 
-    <!-- navbar -->
-    <script>
-        const navDialog = document.getElementById('nav-dialog');
-        function handleMenu() {
-            navDialog.classList.toggle('hidden');
-        }
-    </script>
 
-
+    <script src="assets/script/navbar.js"></script>
     <script src="assets/script/blog.js"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        ScrollTrigger.matchMedia({
-
-            // Mobile only (max-width: 768px)
-            "(max-width: 640px)": function () {
-                const items = gsap.utils.toArray(".stackCard");
-                const lastCard = items[items.length - 1];
-
-                let lastCardHeight = lastCard.clientHeight;
-                const totaOffset = parseFloat(lastCard.getAttribute("animation-item")) || 0;
-                lastCardHeight += totaOffset;
-
-                items.forEach((item, index) => {
-                    let tl = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: item,
-                            start: "top top+=" + item.getAttribute("animation-item"),
-                            endTrigger: ".container",
-                            end: `bottom top+=${lastCardHeight}px`,
-                            pin: true,
-                            pinSpacing: false,
-                            scrub: true,
-                            markers: false
-                        }
-                    });
-
-                    if (item === lastCard) {
-                        tl.to(item, {
-                            scale: 0.9 + 0.02 * index,
-                            transformOrigin: "center center"
-                        });
-                    } else {
-                        tl.to(item, {
-                            opacity: 0.4,
-                            scale: 0.9 + 0.02 * index,
-                            transformOrigin: "center center"
-                        });
-                    }
-                });
-            }
 
 
-
-        });
-    </script>
 
 
 </body>
