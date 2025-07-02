@@ -98,9 +98,9 @@
             </div>
 
             <div class="flex py-5 px-4">
-                <button class="bg-gray-900 text-white rounded-full py-2.5 px-8 text-center font-semibold">
-                    Get a Free Quote
-                    <i class="fas fa-arrow-right ml-3"></i>
+                <button onclick="openModal(event)"
+                    class="bg-gray-900 text-white rounded-full py-2.5 px-8 text-center font-semibold">
+                    Nova Newsletter
                 </button>
             </div>
         </div>
@@ -726,11 +726,14 @@
 
 
 
+
+
     <!-- Newsletter Modal -->
     <div id="newsletterModal"
-        class="fixed inset-0 z-50 hidden items-center justify-center backdrop-blur-sm bg-black/30">
+        class="fixed inset-0 z-50 hidden backdrop-blur-sm bg-black/30 flex items-center justify-center p-10">
         <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full relative">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl cursor-pointer">
                 &times;
             </button>
             <h2 class="text-xl font-bold mb-4">Subscribe to Our Newsletter</h2>
@@ -745,6 +748,7 @@
             </form>
         </div>
     </div>
+
 
 
 
