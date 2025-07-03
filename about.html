@@ -139,23 +139,61 @@
                 <div>
                     <h2 class="font-serif text-5xl md:text-7xl xl:text-6xl">How it all began</h2>
 
-                    <h4>Over a cup of cofee</h4>
+                    <h4 class="font-semibold">Over a cup of cofee</h4>
 
-                    <div class="flex mb-4">
+                    <div class="flex items-center my-4">
                         <img src="assets/img/team/team1.jpg" class="w-20" alt="">
                         <img src="assets/img/team/team2.jpg" class="w-20" alt="">
                         <img src="assets/img/team/team3.jpg" class="w-20" alt="">
                     </div>
 
 
-                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores repellat, quidem,
-                        voluptate
-                        doloremque, dolores, voluptas, quis, quos, eaque, quae, ipsa, aspernatur, fugiat, labore
-                        voluptatem, quisquam, doloribus.
+                    <p class="mb-4">
+                        It all started with a phone call - and turned into a meeting that changed everything.
                     </p>
 
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis culpa quia ut voluptatibus
-                        amet hic fuga voluptate, aliquam debitis molestiae.</p>
+                    <p class="mb-4">
+                        For a long time, there was just an idea. <span class="font-semibold">Sarindu</span> had always
+                        dreamed of building something in the
+                        creative tech space - a company that blends vibrant design, clean code, and real-world
+                        functionality. But coming from a background in business and medicine, he knew he needed the
+                        right team to make it real.
+                    </p>
+
+                    <p class="mb-4">
+                        The search took time. What he didn’t realize was that the right people were already close.
+                    </p>
+
+                    <!-- Hidden content -->
+                    <div id="moreContent" class="hidden">
+                        <p class="mb-4">
+                            <span class="font-semibold">Kavisha</span> - a close friend for over a decade - had always
+                            been around. But it was through him
+                            that
+                            Sarindu reconnected with his elder brother, <span class="font-semibold">Hirunika</span> - an
+                            experienced developer with a sharp
+                            eye
+                            for design and a strong background in web development. From the very first phone call, it
+                            just
+                            clicked. The designs, the energy, the vision - it all aligned.
+                        </p>
+
+                        <p class="mb-4">
+                            As it turned out, Hirunika had also been carrying the idea of joining a startup in the back
+                            of
+                            his mind. Having worked with a few before, the concept of building something new wasn’t
+                            unfamiliar to him. He loved the direction, saw the potential, and welcomed the idea with
+                            open
+                            hands. What started as a casual conversation quickly grew into a powerful beginning - full
+                            of
+                            mutual respect and excitement.
+                        </p>
+                    </div>
+
+                    <!-- Read More Button -->
+                    <button id="readMoreBtn" class="text-blue-600 underline hover:text-blue-800">
+                        Read more...
+                    </button>
 
 
 
@@ -183,11 +221,11 @@
         <div id="bentoGrid" class="max-w-7xl mx-auto bg-slate-50 mt-6 py-12 px-10 rounded-4xl">
             <div>
                 <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-900">
-                    Custom Design Solutions <br class="hidden md:block" /> That Elevate Your Brand
+                    Who we are, What we stand for, and <br class="hidden md:block" />Where we’re headed.
                 </h2>
                 <p class="mt-4 text-gray-700 max-w-md">
-                    At Nova Studio, we don’t just build software — we create intelligent, scalable, and elegant
-                    solutions that empower teams and transform businesses.
+                    At the heart of everything we do lies a shared passion for creativity, technology, and meaningful
+                    impact.
                 </p>
             </div>
 
@@ -387,6 +425,16 @@
 
 
     <script src="assets/script/navbar.js"></script>
+
+
+    <script>
+        document.getElementById("readMoreBtn").addEventListener("click", function () {
+            const content = document.getElementById("moreContent");
+            content.classList.remove("hidden");
+            this.style.display = "none"; // hide the button after click
+        });
+    </script>
+
 
 
 </body>
