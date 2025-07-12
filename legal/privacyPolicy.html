@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="../assets/styles/style.css">
+
+</head>
+
+
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="relative z-50 w-full text-sm font-semibold mb-4">
+        <nav class="max-w-7xl mx-auto">
+            <div class="relative flex items-center justify-between py-2 px-4 md:px-6">
+                <!-- Logo -->
+                <a href="../index.html">
+                    <img src="../assets/img/logo.png" class="w-24" alt="Logo" />
+                </a>
+
+                <!-- Subscribe Button -->
+                <a href="#" onclick="openModal(event)"
+                    class="group ml-6 hidden sm:flex lg:hidden xl:flex items-center gap-2 rounded-full bg-white/25 px-3 py-2 text-xs ring-1 ring-black/[0.08] hover:bg-white/50 hover:ring-black/[0.13]">
+                    <svg class="w-4 h-4 fill-sky-500" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5z" />
+                    </svg>
+                    <span>Subscribe for our Newsletter</span>
+                    <svg viewBox="0 0 5 8" class="h-2 w-[5px] fill-black/30 group-hover:fill-black/60">
+                        <path
+                            d="M.2.24A.75.75 0 0 1 1.26.2l3.5 3.25a.75.75 0 0 1 0 1.1L1.26 7.8A.75.75 0 0 1 .24 6.7L3.148 4 .24 1.3A.75.75 0 0 1 .2.24Z" />
+                    </svg>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="ml-auto hidden lg:flex items-center">
+                    <a href="../services.html" class="ml-6">Services</a>
+                    <a href="../projects.html" class="ml-8">Projects</a>
+                    <a href="../about.html" class="ml-8">About</a>
+                </div>
+
+                <!-- Mobile Menu Icon -->
+                <button onclick="toggleMobileMenu()"
+                    class="-my-1 -mr-1 ml-6 flex size-8 items-center justify-center lg:hidden">
+                    <i class="fas fa-bars text-gray-600 text-2xl"></i>
+                </button>
+
+                <!-- CTA Desktop -->
+                <div class="hidden lg:ml-8 lg:flex lg:items-center lg:border-l lg:border-slate-900/15 lg:pl-8">
+                    <a href="../contact.html">Contact Us</a>
+                    <a href="#"
+                        class="inline-flex justify-center rounded-full text-sm font-semibold py-2.5 px-4 bg-slate-900 text-white hover:bg-slate-700 -my-2.5 ml-8">
+                        Get a Free Quote →
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden py-2 fixed z-10 lg:hidden bg-white inset-0">
+            <div class="flex items-center justify-between px-4 md:px-6">
+                <a href="/"><img src="../assets/img/logo.png" class="w-24" alt="Logo" /></a>
+                <button onclick="toggleMobileMenu()" class="-my-1 -mr-1 ml-6 flex size-8 items-center justify-center">
+                    <i class="fas fa-times text-gray-600 text-2xl"></i>
+                </button>
+            </div>
+
+            <div class="flex flex-col gap-5 pt-12 pb-5 border-b border-slate-900/15 px-4">
+                <a href="../services.html" class="text-lg">Services</a>
+                <a href="../projects.html" class="text-lg">Projects</a>
+                <a href="../about.html" class="text-lg">About</a>
+                <a href="../contact.html" class="text-lg">Contact Us</a>
+            </div>
+
+            <div class="flex py-5 px-4">
+                <button onclick="openModal(event)"
+                    class="bg-gray-900 text-white rounded-full py-2.5 px-8 text-center font-semibold">
+                    Nova Newsletter
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- hero section -->
+    <div class="px-4 md:px-0 relative">
+        <div class="max-w-7xl mx-auto md:pt-6 rounded-4xl relative z-40">
+
+            <!-- main title -->
+            <h2 class="font-serif text-center text-4xl md:text-7xl xl:text-6xl mb-6">
+                Studio Nova <br class="hidden md:block" />Privacy Policy
+            </h2>
+
+        </div>
+    </div>
+
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-4 py-12 space-y-8">
+        <section>
+            <h2 class="text-2xl font-semibold mb-2 font-serif">1. Introduction</h2>
+            <p>
+                At Studio Nova, your privacy is important to us. This Privacy Policy explains how we collect, use, and
+                protect your personal information when you use our services.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2 font-serif">2. Information We Collect</h2>
+            <p>
+                We may collect personal information such as your name, email address, company name, and usage data when
+                you interact with our website or use our software.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2 font-serif">3. How We Use Your Information</h2>
+            <ul class="list-disc list-inside space-y-1">
+                <li>To provide and improve our services</li>
+                <li>To communicate with you regarding updates or support</li>
+                <li>To analyze usage and enhance user experience</li>
+                <li>To comply with legal obligations</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2 font-serif">4. Data Sharing & Disclosure</h2>
+            <p>
+                We do not sell your data. We may share your information with trusted third parties who help us operate
+                our business, as long as they comply with strict data protection standards.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2 font-serif">5. Your Rights</h2>
+            <p>
+                You have the right to access, update, or delete your personal data. You may also opt-out of marketing
+                communications at any time.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2 font-serif">6. Data Security</h2>
+            <p>
+                We use industry-standard security measures to protect your information, including encryption and secure
+                servers.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2 font-serif">7. Changes to This Policy</h2>
+            <p>
+                We may update this policy from time to time. Changes will be posted on this page with an updated
+                effective date.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2 font-serif">8. Contact Us</h2>
+            <p>
+                If you have any questions about this Privacy Policy, please contact us at: <br />
+                <a href="thestudionovadesigns@gmail.com"
+                    class="text-blue-600 hover:underline">thestudionovadesigns@gmail.com</a>
+            </p>
+        </section>
+    </main>
+
+
+    <!-- footer -->
+    <footer class="bg-white pt-20 md:pt-30 p-4 relative">
+
+        <img src="../assets/img/footerIcon.png" class="absolute rotate-12 -top-10 right-6 w-40 z-0" alt="">
+
+        <div class="max-w-7xl mx-auto">
+
+            <!-- main footer -->
+            <div class="grid grid-cols-1 md:grid-cols-6 pb-40">
+
+                <!-- logo and slogan with social media icons -->
+                <div class="md:col-span-3 mb-8">
+                    <!-- logo -->
+                    <img src="../assets/img/logo.png" class="w-40" alt="">
+                    <!-- slogan -->
+                    <p class="max-w-md mt-6">
+                        We help startups and businesses transform their ideas into powerful digital experiences.
+                    </p>
+
+
+                </div>
+
+                <div class="md:col-span-1 mb-8">
+                    <h5 class="text-lg font-serif font-semibold mb-2 md:mb-4">Pages</h5>
+                    <div class="space-y-1">
+                        <p><a href="../services.html">Services</a></p>
+                        <p><a href="../projects.html">Projects</a></p>
+                        <p><a href="../about.html">About</a></p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 mb-8">
+                    <h5 class="text-lg font-serif font-semibold mb-2 md:mb-4">Resources</h5>
+                    <div class="space-y-1">
+                        <p><a href="../contact.html">Contact</a></p>
+                        <p><a href="../contact.html">FAQ</a></p>
+
+
+                    </div>
+                </div>
+
+
+                <div class="md:col-span-1 mb-8">
+                    <h5 class="text-lg font-serif font-semibold mb-2 md:mb-4">Social</h5>
+                    <div class="flex gap-4 mt-6">
+                        <!-- linkedin -->
+                        <p>
+                            <a target="_blank" href="https://www.linkedin.com/company/studio-nova-designs/">
+                                <i class="fa-brands fa-linkedin text-xl"></i>
+                            </a>
+                        </p>
+                        <!-- instagram -->
+                        <p>
+                            <a target="_blank"
+                                href="https://www.instagram.com/the_studio_nova_designs?igsh=MThjNHI1Z3hwZTBoMA%3D%3D&utm_source=qr">
+                                <i class="fa-brands fa-instagram text-xl"></i>
+
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- secondary footer -->
+            <div class="md:flex justify-between pb-4">
+
+                <div class="mb-1.5 md:mb-0">
+                    <p class="text-sm text-gray-800">©Studio NOVA. All Rights Reserved.</p>
+                </div>
+
+                <div class="hidden md:flex text-sm text-gray-800 divide-x divide-gray-300">
+                    <p class="pr-4"><a href="privacyPolicy.html">Privacy Policy</a></p>
+                    <p class="pl-4"><a href="termsOfService.html">Terms of Service</a></p>
+                </div>
+
+
+                <div>
+                    <p class="text-sm text-gray-800">Powered by <span class="font-semibold">NOVA Designs</span></p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </footer>
+
+
+
+    <!-- Newsletter Modal -->
+    <div id="newsletterModal"
+        class="fixed inset-0 z-50 hidden backdrop-blur-sm bg-black/30 flex items-center justify-center p-10">
+        <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full relative">
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl cursor-pointer">
+                &times;
+            </button>
+            <h2 class="text-xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p class="text-sm mb-4 text-gray-600">
+                Get the latest updates straight to your inbox.
+            </p>
+            <form>
+                <input type="email" placeholder="Your email" class="w-full p-2 border rounded mb-4" />
+                <button type="submit" class="w-full bg-black text-white py-2 rounded hover:bg-gray-800">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="../assets/script/navbar.js"></script>
+
+
+</body>
+
+</html>
